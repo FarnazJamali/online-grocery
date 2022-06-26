@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onload="fillProductsGrid()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 bg-secondary position-fixed bg-opacity-50 text-white p-2" style="z-index: 2;">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light position-relative" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        <span id="basketCount">0</span>
+                        <span class="visually-hidden">unread messages</span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12  p-3">&nbsp;</div>
+        </div>
+        <div class="row row-cols-4 g-3 m-3" id="productsGrid">
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-striped table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <i class="fa-solid fa-arrow-down-1-9 mx-3 border border-1"></i>
+                                    <i class="fa-solid fa-arrow-down-9-1 mx-3 border border-1"></i>
+                                </td>
+                                <td>Price</td>
+                                <td>Quantity</td>
+                                <td>Basket</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+
+                        <tbody></tbody>
+
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/1.js"> </script>
+</body>
+
+</html>
