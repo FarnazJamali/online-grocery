@@ -129,4 +129,15 @@ function deleteItem(productIndex) {
     shoppingCard.splice(productIndex, 1);
     createRows()
 
+};
+
+function addQuantity(productIndex) {
+    shoppingCard[productIndex].productQuantity += 1;
+    createRows()
+}
+
+function removeQuantity(productIndex) {
+    if (shoppingCard[productIndex].productQuantity > 1)
+        shoppingCard[productIndex].productQuantity -= 1;
+    createRows()
 }
